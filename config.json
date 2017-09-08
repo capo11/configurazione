@@ -5,8 +5,9 @@
         "Cartella1":"./W36",
         	"USR1":"",
         	"PWD1":"",
-        "Cartella2":"./W37",
-        	"USR2":"",
-        	"PWD2":""
+        "Server":"ftp.tabacchigest.com/stage",
+        	"USR2":"gioi",
+        	"PWD2":"test1234",
+        "Log":"./analisi.log"
     }]
 }
