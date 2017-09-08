@@ -58,12 +58,13 @@ contaneg = 0
 contapos = 0
 for linea in listadir:
     linea.strip()
-    primo = open('./Master/' + linea)
-    for riga in primo.readlines():
-        if((int(float(riga))) < 0):
-            contaneg = contaneg + int(float(riga))
-        else:
-            contapos = contapos + int(float(riga))
+    if 'txt' in linea:
+        primo = open('./Master/' + linea)
+        for riga in primo.readlines():
+            if((int(riga)) < 0):
+                contaneg = contaneg + int(float(riga))
+            else:
+                contapos = contapos + int(float(riga))
 log = open('analisi.log', 'w')
 log.writelines('Settimana ' + week + '  ')
 log.write('positivi: ' + str(contapos) + ', negativi: ' + str(contaneg))
