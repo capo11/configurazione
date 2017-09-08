@@ -23,6 +23,7 @@ def loadConfig():
 jConf = loadConfig()
 master = jConf['file'][0]['Master']
 path36 = jConf['file'][0]['Cartella1']
+path37 = jConf['file'][0]['Cartella2']
 usr1 = jConf['file'][0]['USR']
 # recupera il valore di un parametro dal json
 print path36
@@ -36,11 +37,13 @@ def ricerca(pathCartella):
     for linea in listadir:
         linea.strip()
         if week in linea:
-            shutil.move(pathCartella + '/' + linea, './Master')
+            shutil.move(pathCartella + '/' + linea, master)
 
 
 ricerca(path36)
+ricerca(path37)
 
-
+'''
 with tarfile.open('./Master/W' + week + '.tgz', 'w:gz') as tar:
     tar.add('./W36/W' + week, arcname=os.path.basename('./W36/W' + week))
+'''
